@@ -1,0 +1,167 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+body {
+  background-color: #333;
+  color: #333;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+#root {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+  /*make the content div flex so that the form can take the center alignment from flexbox properties. Add the centering here and avoid the margin: auto property */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#quote-box {
+  cursor: pointer;
+  width: 450px;
+  background-color: aliceblue;
+  height: auto;
+  padding: 40px 50px;
+  border-radius: 10px;
+}
+
+#quote-box .quote-text {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.75em;
+  padding: 15px;
+}
+
+#quote-box .quote-author {
+  padding-top: 20px;
+  font-size: 1em;
+  text-align: right;
+  padding-right: 10px;
+}
+
+#quote-box .buttons {
+  display: flex;
+  padding: 10px;
+}
+
+#quote-box .buttons .button {
+  text-decoration: none;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #333;
+  outline: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.85em;
+  padding: 10px 18px 10px 18px;
+  margin-top: 30px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+#quote-box #new-quote {
+  margin-left: auto;
+}
+
+.loading-container {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /* background-color: white; */
+  overflow: hidden;
+  -webkit-transition: all 0.3s 0.6s ease-out;
+  transition: all 0.3s 0.6s ease-out;
+}
+
+.loader-dzg {
+  filter: saturate(3);
+  width: 0.1px;
+  height: 0.1px;
+  border: 40px solid transparent;
+  border-radius: 5px;
+  animation: loader 3s ease-in infinite, spin 1s linear infinite;
+}
+
+.loader-dzg::before {
+  filter: saturate(0.3);
+  display: block;
+  position: absolute;
+  z-index: -1;
+  margin-left: -40px;
+  margin-top: -40px;
+  content: "";
+  height: 0.1;
+  width: 0.1;
+  border: 40px solid transparent;
+  border-radius: 5px;
+  animation: loader 2s ease-in infinite reverse,
+    spin 0.8s linear infinite reverse;
+}
+
+.loader-dzg::after {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  margin-left: -10px;
+  margin-top: -10px;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+@keyframes loader {
+  0% {
+    border-bottom-color: transparent;
+    border-top-color: #114357;
+  }
+  25% {
+    border-left-color: transparent;
+    border-right-color: #826c75;
+  }
+  50% {
+    border-top-color: transparent;
+    border-bottom-color: #f29492;
+  }
+  75% {
+    border-right-color: transparent;
+    border-left-color: #826c75;
+  }
+  100% {
+    border-bottom-color: transparent;
+    border-top-color: #114357;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@media (max-width: 450px) {
+  #quote-box {
+    width: 100%;
+  }
+}
