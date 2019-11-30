@@ -1,5 +1,3 @@
-import './App.css';
-
 const FETCH_QUOTES = "FETCH_QUOTES";
 const NEW_QUOTE = "NEW_QUOTE";
 
@@ -191,5 +189,3 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
-
-export default App;
