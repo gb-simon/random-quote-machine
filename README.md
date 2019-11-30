@@ -1,3 +1,8 @@
+React && Redux. I made this app for freeCodeCamp. This is part of the Front End Libraries Projects - Build a Random Quote Machine
+Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/qRZeGZ.
+
+I made the app using React and Redux libraries.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
